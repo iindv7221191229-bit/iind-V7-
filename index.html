@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Sensitivity Engine</title>
+
+<!-- PWA SUPPORT -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00ffcc">
+
+<!-- ICON (optional) -->
+<link rel="icon" href="icon.png">
+
+<!-- STYLE -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>🧠 AI GAMING SENSITIVITY ENGINE</h1>
+
+<!-- INPUTS -->
+<input type="text" id="device" placeholder="Enter device name (Samsung, iPhone...)">
+
+<input type="number" id="ram" placeholder="RAM (GB)">
+<input type="number" id="fps" placeholder="FPS (30 / 60 / 90 / 120)">
+
+<!-- BUTTONS -->
+<button onclick="autoDetect()">⚡ Auto Detect Device</button>
+<button onclick="generateSensi()">🎮 Generate Sensitivity</button>
+
+<!-- RESULT -->
+<div id="result"></div>
+
+<!-- AI FEEDBACK BUTTONS (for learning system) -->
+<div id="feedback">
+  <button onclick="good()">👍 Good Sensitivity</button>
+  <button onclick="bad()">👎 Bad Sensitivity</button>
+</div>
+
+<!-- INSTAGRAM PROMO (safe version) -->
+<a href="https://instagram.com/iind_v7" target="_blank">
+  <button class="insta">📸 Follow @iind_v7</button>
+</a>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+<!-- SERVICE WORKER (PWA OFFLINE SUPPORT) -->
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+
+</body>
+  </html>
