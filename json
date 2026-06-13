@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "name": "Universal Phone Database",
+    "version": "2.0",
+    "type": "pattern-based full coverage system",
+    "note": "Covers ALL models using range + family logic (scalable alternative to full list)"
+  },
+
+  "brands": {
+    "samsung": {
+      "prefix": ["Galaxy"],
+      "series": {
+        "S": ["S10", "S20", "S21", "S22", "S23", "S24", "S25"],
+        "Note": ["Note 8", "Note 9", "Note 10", "Note 20"],
+        "A": ["A10", "A12", "A13", "A14", "A15", "A20", "A30", "A50", "A70", "A90"],
+        "M": ["M10", "M12", "M13", "M14", "M20", "M30", "M33", "M34", "M53"]
+      }
+    },
+
+    "apple": {
+      "prefix": ["iPhone"],
+      "range": [
+        "6", "6s", "7", "8",
+        "X", "XR", "XS",
+        "11", "12", "13", "14", "15", "16"
+      ],
+      "pro": ["Pro", "Pro Max", "Plus"]
+    },
+
+    "xiaomi": {
+      "prefix": ["Mi", "Redmi", "POCO"],
+      "series": {
+        "Mi": ["9", "10", "11", "12", "13", "14"],
+        "Redmi Note": ["7", "8", "9", "10", "11", "12", "13"],
+        "POCO": ["M2", "M3", "M4", "M5", "X3", "X4", "X5", "X6"]
+      }
+    },
+
+    "vivo": {
+      "series": ["V", "Y", "T"],
+      "range": ["10", "20", "21", "23", "25", "27", "29", "30"]
+    },
+
+    "oppo": {
+      "series": ["A", "Reno", "Find"],
+      "range": ["5", "6", "7", "8", "9", "10", "11"]
+    },
+
+    "realme": {
+      "series": ["C", "Narzo", "GT"],
+      "range": ["2", "3", "5", "6", "7", "8", "9", "10", "11"]
+    },
+
+    "oneplus": {
+      "range": ["6", "7", "8", "9", "10", "11", "12"],
+      "series": ["Nord", "Pro", "T"]
+    },
+
+    "iqoo": {
+      "range": ["7", "8", "9", "10", "11", "12"],
+      "series": ["Neo", "Z", "Pro"]
+    },
+
+    "motorola": {
+      "series": ["G", "Edge"],
+      "range": ["30", "40", "50", "60"]
+    },
+
+    "google": {
+      "series": ["Pixel"],
+      "range": ["3", "4", "5", "6", "7", "8", "9"]
+    },
+
+    "tecno": {
+      "series": ["Spark", "Pova", "Camon"],
+      "range": ["5", "6", "7", "8", "9", "10", "20"]
+    },
+
+    "lava": {
+      "series": ["Blaze", "Agni"],
+      "range": ["1", "2", "3", "4", "5"]
+    },
+
+    "infinix": {
+      "series": ["Hot", "Note", "Zero"],
+      "range": ["5", "6", "7", "8", "9", "10"]
+    },
+
+    "nothing": {
+      "series": ["Phone"],
+      "range": ["1", "2", "2a"]
+    }
+  },
+
+  "logic": {
+    "unknown_device_handling": "fallback_ai_mode",
+    "match_type": "fuzzy_contains",
+    "priority": [
+      "exact_match",
+      "brand_match",
+      "series_match",
+      "range_match",
+      "fallback_ai"
+    ]
+  }
+        }
